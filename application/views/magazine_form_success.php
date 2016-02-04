@@ -1,0 +1,1 @@
+<div class="alert alert-success">Magazine issue #<?php echo $issue->issue_number; ?> Saved Successfully</div>
