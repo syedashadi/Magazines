@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://saas.local/Magazines/';
+$config['base_url']	= 'http://saas-sis.local/magazines/';
 
 /*
 |--------------------------------------------------------------------------

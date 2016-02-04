@@ -10,11 +10,13 @@ $template = array('table_open' => '<table class="table table-striped tablesorter
 $this->table->set_template($template);
 $this->table->set_heading('Issue id', 'Publication', 'Issue Number', 'Issue Date', 'Cover', 'Actions'); 
 echo $this->table->generate($magazines);
-echo $this->pagination->create_links();
+
+?>
 
 
-
-
+<ul class="pagination">
+  <li><a href="#"><?php echo $this->pagination->create_links();?></a></li>
+</ul>
 
 
 

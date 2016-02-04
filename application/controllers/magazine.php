@@ -20,9 +20,15 @@ class Magazine extends CI_Controller {
         $this->load->view('bootstrap/header');
         
         // preparing pagination
-        $config['base_url'] = 'http://saas.local/Magazines/index.php/magazine/index';
+        $config['base_url'] = 'http://saas-sis.local/magazines/index.php/magazine/index';
         $config['total_rows'] = $this->db->count_all_results('issues');
-        $config['per_page'] = 2;
+        $config['per_page'] = 4;
+		$config['first_tag_open'] = $config['last_tag_open']= $config['next_tag_open']= 
+			$config['prev_tag_open'] = $config['num_tag_open'] = '<li>';
+		$config['first_tag_close'] = $config['last_tag_close']= $config['next_tag_close']= 
+			$config['prev_tag_close'] = $config['num_tag_close'] = '</li>';
+		$config['cur_tag_open'] = "<li><span><b>";
+		$config['cur_tag_close'] = "</b></span></li>";
         $this->pagination->initialize($config);
         
         // getting the page for pagination
